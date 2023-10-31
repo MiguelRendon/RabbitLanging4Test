@@ -1,0 +1,37 @@
+{
+  "name": "rabbit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "engines": {
+    "node": "^14.20.0",
+    "yarn": "~1.22.19"
+  },
+  "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.11.1",
+    "@lottiefiles/react-lottie-player": "^3.4.1",
+    "bulma": "^0.9.3",
+    "contentful": "^8.5.0",
+    "formik": "^2.2.9",
+    "fslightbox-react": "^1.6.2-2",
+    "gsap": "^3.7.1",
+    "next": "^11.0.1",
+    "nextjs-breadcrumbs": "^1.1.4",
+    "node-sass": "^4.14.1",
+    "react": "^17.0.2",
+    "react-cookie-consent": "^7.0.1",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "swiper": "^6.8.1",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "eslint": "7.30.0",
+    "eslint-config-next": "11.0.1"
+  }
+}

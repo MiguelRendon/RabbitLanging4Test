@@ -1,0 +1,79 @@
+// Section Grad
+.section-grad {
+	position: relative;
+	overflow: hidden;
+	background: 
+		url('/rabbit-frame.svg'), 
+		url('/elipse-white-3.svg'), 
+		url('/elipse-green-1.svg'),
+		linear-gradient(180deg, #00ADEF 0%, #00A8EE 16.15%, #0076E0 100%);
+	background-repeat: no-repeat;
+	background-position: 100% 55%, 90% 90%, 150% 110%, center center;
+	background-size: 150px, 60px, 200px, 100%;
+	padding: 20px 0px 0px !important;
+	&::before {
+		content: '';
+		height: 50%;
+		position: absolute;
+		width: 100%;
+		// background: $secondary-color-2;
+		background: linear-gradient(180deg, #EEFF01 0%, #B6D300 100%);
+		border-radius: 0px 0px 400px 400px;
+		top: 0;
+		left: 0;
+	}
+	.columns {
+		.column {
+			padding: 0px 0.75rem;
+		}
+	}
+	.image {
+		max-width: 350px;
+		margin: -2rem 0px 0px 0.625rem;
+	}
+	.cont-info {
+		max-width: 600px;
+		text-align: center;
+		margin: auto;
+		padding: 4rem 10px;
+	}
+}
+
+// Responsive Tablet
+@mixin section-grad-tablet {
+	.section-grad {
+		background-position: 90% 55%, 85% 90%, 110% 110%, center center;
+		background-size: 150px, 60px, 200px, 100%;
+		.image {
+			margin: auto;
+		}
+	}
+}
+// Responsive Desktop
+@mixin section-grad-desktop {
+	.section-grad {
+		background-position: 95% 60%, calc(100% - 250px ) 25px, calc(100% - 50px) -150px, center center;;
+		background-size: auto, 70px, 250px, 100%;
+		&:before {
+			height: 150%;
+			width: 55%;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 0px 500px 500px 0px;
+		}
+		&.has-round-bottom {
+			background-position: 78% 60%, 72% 25px, 80% -150px, center center;
+		}
+		.container {
+			padding-top: 2rem;
+		}
+		.image {
+			max-width: 500px;
+			margin: 0px;
+		}
+		.cont-info {
+			text-align: left;
+			margin: 0px	;
+		}
+	}
+}

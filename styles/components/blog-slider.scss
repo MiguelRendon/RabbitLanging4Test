@@ -1,0 +1,41 @@
+// Blog Slider
+
+.blog-slider {
+	border-radius: 10px;
+	.swiper-container {
+		padding: 0px 0px 3.125rem !important;
+	}
+	.blog-slide {
+		padding: 10px 40px;
+		.cont-info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			min-height: 200px;
+		}
+	}
+}
+
+@mixin blog-slider-tablet {
+	.blog-slider {
+		.blog-slide {
+			padding: 10px 50px;
+			.cont-info {
+				min-height: 500px;
+			}
+		}
+	}
+}
+
+// Responsive Desktop
+@mixin blog-slider-desktop {
+	.blog-slider {
+		.blog-slide {
+			padding: 20px 50px;
+			.cont-info {
+				min-height: 600px;
+			}
+		}
+	}
+}

@@ -1,0 +1,144 @@
+@media only screen and (min-width: 769px) {
+
+	h1 {
+		font-size: 45px;
+	}
+
+	h2 {
+		font-size: 40px;
+	}
+
+	h3 {
+		font-size: 30px;
+	}
+
+	h4 {
+		font-size: 24px;
+	}
+
+	p {
+		font-size: 20px;
+	}
+
+	// Helpers
+	.has-round-bottom {
+		position: relative;
+		overflow: hidden;
+		border-bottom-left-radius: 50% 200px !important;
+		border-bottom-right-radius: 50% 200px !important;
+		z-index: 2;
+		width: 160%;
+		left: -30%;
+		padding: 100px 300px;
+		&.rmvPad {
+			padding: 0px 300px !important;
+		}
+	}
+	.has-translated-top {
+		margin-bottom: -10rem;
+		padding: 5rem 0px 3.125rem;
+	}
+	.has-elipse-elements {
+		.elipse-1, .elipse-2, .elipse-3, .elipse-4 {
+			display: block;
+		}
+	}
+	.cont-info {
+		max-width: 1000px;
+		margin: auto;
+		.buttons {
+			align-items: flex-start;
+			&.is-row {
+				flex-direction: row;
+
+			}
+		}
+		h1, h2, h3, p {
+			strong {
+				text-align: left;				
+			}
+			text-align: left;
+		}
+	}
+
+	.disclaimer {
+		text-align: left;
+	}
+
+	.buttons {
+		text-align: left;
+		&.has-text-right {
+			text-align: right;
+		}
+	}
+
+	.form-tabs {
+		.icon {
+			display: none;
+		}
+	}
+
+	// Patch
+
+	.section {
+		padding: 3rem 1.5rem;
+	}
+
+	.wrap {
+		min-height: calc(100vh - 207px);
+		&.has-header-label {
+			padding-top: 177.25px;
+		}
+	}
+
+	.traslateY {
+		transform: translateY(-6rem);
+	}
+
+	.download-cont {
+		.image {
+			display: block;
+		}
+	}
+
+	.text-centered {
+		text-align: inherit
+	}
+
+	// Components
+	@include acordeon-desktop;
+	@include blog-slider-desktop;
+	@include brands-desktop;
+	@include breadcrumb-desktop;
+	@include download-desktop;
+	@include home-dot-bg-desktop;
+	@include join-us-desktop;
+	@include page-hero-desktop;
+	@include path-desktop;
+	@include product-card-desktop;
+	@include rabbit-list-desktop;
+	@include scope-desktop;
+	@include section-grad-desktop;
+	@include section-stock-desktop;
+	@include tabs-smartphone;
+	@include video-player-desktop;
+
+	// Custom Page
+	@include home-section-hero-desktop;
+	@include home-section-route-desktop;
+	@include home-section-steps-desktop;
+	@include page-ally-desktop;
+	@include page-blog-slug-desktop;
+	@include page-contact-desktop;
+	@include page-coverage-desktop;
+	@include page-marketplace-desktop;
+	@include page-partners-dektop;
+	@include page-rabbit-desktop;
+	@include page-not-found-desktop;
+	@include page-supply-desktop;
+
+	// Layout
+	@include footer-desktop;
+	@include header-desktop;
+
+}

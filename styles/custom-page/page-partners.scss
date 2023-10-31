@@ -1,0 +1,89 @@
+// Page Partners
+
+.page-partners {
+	.product-behind {
+		padding: 30px 0px;
+		background: linear-gradient(180deg, #00ADEF 0%, #00A8EE 16.15%, #0076E0 100%);
+		.container {
+			overflow: visible;
+		}
+		.first-column {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.catalogo {
+			max-width: 500px;
+			margin: auto;
+		}
+		.scope {
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+			margin: 1rem 0px;
+			h3 {
+				strong {
+					color: $principal-color-1;
+				}
+			}
+		}
+		h2, p {
+			strong {
+				color: $base-color-2;
+			}
+			color: $base-color-2;
+			text-align: left;
+		}
+		.buttons {
+			p {
+				text-align: center !important;
+			}
+		}
+
+	}
+	.rabbit-coverage {
+		background: url('/elipse-blue-2.svg'), url('/elipse-darkblue-1.svg'), url('/back-dots.webp') repeat;
+		// background: url('/elipse-blue-2.svg'), url('/elipse-darkblue-1.svg'), url('/back-dots.jpg') repeat;
+		background-repeat: no-repeat;
+		background-size: 100px, 150px, cover;
+		background-position: calc(0% - 50px) 60%, calc(100% + 120px) 50%, center;
+		.image {
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+
+}
+
+// Responsive Desktop
+@mixin page-partners-dektop {
+	.page-partners {
+		.product-behind {
+			padding: 70px 0px;
+			.first-column {
+				flex-direction: row;
+			}
+			.catalogo {
+				max-width: inherit;
+				margin: 0px;
+			}
+			.cont-info {
+				p, h2 {
+					text-align: right;
+				}
+			}
+			.buttons {
+				p {
+					text-align: right !important;
+				}
+			}
+		}
+		.rabbit-coverage {
+			background-size: 200px, 200px, cover;
+			background-position: calc(0% - 100px) calc(25% - 70px), calc(100% + 100px) calc(100% - 30px), center;
+			.image {
+				max-width: inherit;
+				margin: 0px;
+			}
+		}
+	}
+}

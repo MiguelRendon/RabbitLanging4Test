@@ -1,0 +1,66 @@
+// Page Rabbit
+.page-rabbit {
+	.rabbit-rest {
+		padding: 80px 0px;
+		background: url('/elipse-blue-1.svg'), url('/elipse-darkblue-3.svg'), url('/elipse-blue-3.svg'), url('/elipse-green-2.svg'), #F7F7F9;
+		background-repeat: no-repeat;
+		background-size: 100px, 70px, 70px, 100px, 100%;
+		background-position: calc(0px - 30px) calc(0px - 30px), 10% calc(100% + 25px), 90% calc(0% - 20px), calc(100% + 50px) calc(100% + 50px), center;
+		.cont-info {
+			max-width: 900px;
+			margin: auto;
+		}
+	}
+	.about-rabbit {
+		padding: 30px 0px;
+		.columns {
+			&:nth-child(odd) {
+				flex-direction: row-reverse;
+			}
+		}
+		h1 {
+			margin: 1.25rem 0px 30px;
+		}
+		.image {
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+	.rabbit-scope {
+		padding: 30px 0px;
+	}
+}
+
+// Responsive Desktop
+@mixin page-rabbit-desktop {
+	.page-rabbit {
+		.rabbit-rest {
+			background-size: 150px, 70px, 70px, 150px, 100%;
+			background-position: calc(0px - 100px) 0px, 10% calc(100% + 25px), 90% calc(0% - 20px), calc(100% + 75px) 100%, center;
+		}
+		.about-rabbit {
+			padding: 100px 0px;
+			.image {
+				max-width: inherit;
+				margin: 0px;
+			}
+			h1 {
+				margin: 1.25rem 0px 100px;
+			}
+		}
+		.rabbit-scope {
+			padding: 100px 0px;
+			.columns {
+				.column {
+					margin: 2rem 0px;
+				}
+			}
+		}
+		.section-grad {
+			.image {
+				max-width: inherit;
+				margin: 0px;
+			}
+		}
+	}
+}

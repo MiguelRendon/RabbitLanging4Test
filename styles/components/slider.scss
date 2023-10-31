@@ -1,0 +1,25 @@
+// Slider
+.swiper-container {
+	padding: 3.125rem 0px !important;
+	.swiper-pagination .swiper-pagination-bullets {
+		bottom: 0px !important;
+	}
+	.swiper-pagination-bullet {
+		width: 15px;
+		height: 15px ;
+		background: $secondary-color-2;
+		.swiper-pagination-bullet-active {
+			opacity: 1 ;
+		}
+	}
+	.swiper-button-next, .swiper-button-prev {
+		color: $secondary-color-2;
+		&::after {
+			font-weight: 700;
+			font-size: 50px;
+		}
+		&.swiper-button-disabled {
+			opacity: 1;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+// Video Player
+.video-player {
+	.image {
+		position: relative;
+		&:before {
+			top: 0;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.4);
+			z-index: 1;
+			transition: all 0.3s;
+		}
+	}
+	.icon-play {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+		position: absolute;
+		cursor: pointer;
+		width: 70px;
+		height: 70px;
+		color: $base-color-2;
+		transition: all 0.3s;
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+.video-iframe {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	padding-top: 56.25%;
+	.responsive-iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+// Responsive Desktop
+@mixin video-player-desktop {
+	.video-player {
+		.icon-play {
+			width: 100px;
+			height: 100px;
+		}
+	}
+}

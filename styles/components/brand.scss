@@ -1,0 +1,42 @@
+// Brand
+.brand {
+	display: table;
+	height: 100px;
+	width: 200px;
+	margin: 0.5rem 0px;
+}
+
+.brands {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.25rem auto;
+	justify-content: center;
+	.brand {
+		&:nth-child(-n+2) {
+			display: none;
+		}
+	}
+}
+
+.brans-cont {
+	padding: 50px 0px;
+}
+
+.img-brand-rabbit
+{
+	object-fit: contain;
+	max-height: 94.65px;
+}
+
+@mixin brands-desktop {
+	.brands {
+		.brand {
+			&:nth-child(-n+2) {
+				display: block !important;
+			}	
+		}
+	}
+	.brans-cont {
+		padding: 70px 0px;
+	}
+}

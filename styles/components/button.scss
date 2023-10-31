@@ -1,0 +1,54 @@
+// Button
+.button {
+	border-radius: 50px;
+	border: none;
+	font-weight: 700;
+	transition: all 0.3s;
+	padding: 0px 1.5rem;
+	position: relative;
+	overflow: hidden;
+	&.primary {
+		background: $secondary-color-2 !important;
+		color: $principal-color-1 !important;
+		&:hover {
+			background: $secondary-color-2 !important;
+			color: $principal-color-1 !important;
+			border-color: $secondary-color-2;
+		}
+		&.is-active {
+			background: $principal-color-1 !important;
+			color: $secondary-color-2!important;
+		} 
+	}
+	&.secondary {
+		background: $principal-color-1;
+		border: 1px solid $principal-color-1;
+		color: $base-color-2;
+		&:hover {
+			background: $principal-color-1 !important;
+			color: $base-color-2 !important;
+		}
+	}
+	&.third {
+		background: $base-color-2;
+		border: 1px solid $base-color-2;
+		color: $principal-color-1;
+		&:hover {
+			background: $base-color-2 !important;
+			color: $principal-color-1 !important;
+		}
+	}
+}
+
+.buttons {
+	margin: 2rem 0px;
+	flex-direction: column;
+	align-items: flex-start;
+	text-align: center;
+	&.is-centered {
+		align-items: center;
+	}
+	.button:focus:not(:active), .button.is-focused:not(:active) {
+		box-shadow: 0 0 0 0.125em rgb( 28, 79, 5.12);
+	}
+}

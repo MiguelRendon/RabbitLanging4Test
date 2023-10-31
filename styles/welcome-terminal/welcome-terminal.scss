@@ -1,0 +1,10 @@
+@import 'archives/general-m';
+@media(min-width: 768px){
+    @import 'archives/general-t';
+}
+@media(min-width: 992px){
+    @import 'archives/general-d';
+}
+@media(min-width: 1200px){
+    @import 'archives/general-p';
+}

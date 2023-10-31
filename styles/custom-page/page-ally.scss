@@ -1,0 +1,54 @@
+// Page Rabbit Ally
+.page-ally {
+	.ally-description {
+		background: url('/elipse-blue-1.svg'), url('/elipse-white-1.svg'), $secondary-color-2;
+		background-repeat: no-repeat;
+		background-size: 200px, 200px, 100%;
+		background-position: calc(0% - 130px) 50%, calc(100% + 120px) 90%, center;
+		padding: 50px 0px;
+		.scope {
+			flex-direction: column;
+			.cont-info {
+				max-width: 400px !important;
+			}
+		}
+	}
+	.has-translated-top {
+		background: url('/elipse-white-3.svg'), url('/elipse-green-1.svg'), linear-gradient( 180deg, #00ADEF 0%, #00A8EE 16.15%, #0076E0 100%);
+		background-repeat: no-repeat;
+		background-size: 100px, 200px, 100%;
+		background-position: calc(0% - 30px) calc(40% + 100px), calc(100% + 100px) calc(50% + 100px), center;
+		.columns {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+		.cont-info {
+			h1, p {
+				strong {
+					color: $base-color-2;
+				}
+				color: $base-color-2;
+			}
+		}
+	}
+}
+
+// Responsive Desktop
+@mixin page-ally-desktop {
+	.page-ally {
+		.ally-description {
+			padding: 100px 0px;
+			background-size: 200px, 200px, 100%;
+			background-position: calc(20% - 100px) 10%, calc(80% + 100px) 50%, center;
+		}
+		.has-translated-top {
+			padding: 15rem 0px 0px;
+			background-size: 100px, 300px, 100%;
+			background-position: 90% calc(10% + 100px), calc(100% + 50px) calc(10% - 100px), center;
+			transform: translateY(-10rem);
+			.columns {
+				flex-direction: row;
+			}
+		}
+	}
+}

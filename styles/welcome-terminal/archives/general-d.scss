@@ -1,0 +1,61 @@
+.welcome-terminal {
+	.containerManual {
+		max-width: inherit;
+		margin: 0;
+	}
+	.containerStikers {
+		max-width: inherit;
+		ul {
+			transition: 0.3s ease-in-out;
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+			li {
+				flex-basis: 50%;
+				margin: 0;
+			}
+		}
+	}
+	.mainImage {
+		background-image: url('/terminal-delular-d.jpg');
+		max-height: 550px;
+		flex-basis: 60%;
+		height: 50vh;
+	}
+	.mainTxtWrap {
+		flex-basis: 40%;
+	}
+	.manualBlock {
+		transition: 0.3s ease-in-out;
+		max-width: inherit;
+		flex-basis: 50%;
+		margin: inherit;
+		width: inherit;
+	}
+	.row.secondSection {
+		background-size: 200px auto, 70px auto, 50px auto;
+		transition: 0.3s ease-in-out;
+		padding: 50px 5%;
+		display: flex;
+		gap: 80px;
+	}
+	.stickersBlock {
+		transition: 0.3s ease-in-out;
+		position: relative;
+		border-top: none;
+		flex-basis: 50%;
+		padding-top: 0;
+		margin-top: 0;
+		&::before {
+			transition: 0.3s ease-in-out;
+			background-color: $base-color-2;
+			position: absolute;
+			display: block;
+			content: '';
+			height: 80%;
+			left: -40px;
+			width: 1px;
+			top: 10%;
+		}
+	}
+}

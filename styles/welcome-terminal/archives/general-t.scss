@@ -1,0 +1,37 @@
+.welcome-terminal {
+	.containerStikers {
+		max-width: 480px;
+		ul {
+			align-items: flex-end;
+			display: flex;
+			width: 100%;
+			li {
+				flex-basis: 190px;
+				margin: 0 25px;
+			}
+		}
+	}
+	.mainImage {
+		flex-basis: 50%;
+	}
+	.mainTxtWrap {
+		align-items: center;
+		flex-basis: 50%;
+		display: flex;
+		padding: 0;
+	}
+	.row {
+		display: flex;
+		&.secondSection {
+			background-image: url('/medio-circulo-verde-bottom.png'), url('/top-ring.png'), url('/green-ring.png');
+			background-position: center bottom, 10% top, right 60%;
+			background-repeat: no-repeat, no-repeat, no-repeat;
+			background-size: 200px auto, 100px auto, 80px auto;
+			padding: 80px 10%;
+			display: block;
+		}
+	}
+	.text {
+		padding: 0 10%;
+	}
+}

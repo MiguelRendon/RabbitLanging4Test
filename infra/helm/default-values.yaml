@@ -1,0 +1,15 @@
+image:
+  repository: 764802753620.dkr.ecr.us-east-2.amazonaws.com/landing/landing
+
+ingress:
+  annotations:
+    # alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-2:764802753620:regional/webacl/tf-rabbit-default-waf-acl/12b81886-4e68-45da-8ece-0aaa13a1bfd5
+    external-dns.alpha.kubernetes.io/hostname: rabbitmx.com
+    alb.ingress.kubernetes.io/actions.redirect-to-root: '{"Type": "redirect","redirectConfig":{ "host": "rabbitmx.com", "port":"443", "protocol":"HTTPS", "statusCode":"HTTP_301"}}'
+  hosts:
+    - host: "rabbitmx.com"
+      paths:
+        - path: /
+          pathType: Prefix
+    - host: "www.rabbitmx.com"
+      onlyUseAnnotation: "redirect-to-root"

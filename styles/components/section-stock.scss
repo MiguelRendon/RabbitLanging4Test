@@ -1,0 +1,74 @@
+// Section Stock
+.section-stock {
+	// background: linear-gradient(180deg, #004D81 0%, #00305E 100%);
+	background: #F6F7F9;
+	padding: 3rem 0px;
+	position: relative;
+	overflow: hidden;
+	.container {
+		overflow: visible;
+	}
+	h1, h2 {
+		strong {
+			color: $principal-color-1;
+		}
+	}
+	p {
+		color: $principal-color-1 !important;
+		margin: 0px;
+	}
+	a {
+		color: $principal-color-2;
+		text-decoration: underline;
+		margin: 1.25rem 0px;
+		&.button {
+			text-decoration: none;
+		}
+	}
+	.elipse-1, .elipse-2, .elipse-3, .elipse-4 {
+		position: absolute;
+		display: none;
+		// z-index: -1;
+	}
+	.elipse-1 {
+		background: url('/elipse-blue-1.svg') no-repeat;
+		background-size: contain;
+		width: 300px;
+		height: 300px;
+		top: 200px;
+		left: -150px;
+	}
+	.elipse-2 {
+		background: url('/elipse-blue-3.svg') no-repeat;
+		background-size: contain;
+		width: 100px;
+		height: 100px;
+		bottom: 10%;
+		left: -30px;
+	}
+	.elipse-3 {
+		background: url('/elipse-darkblue-3.svg') no-repeat;
+		background-size: contain;
+		width: 100px;
+		height: 100px;
+		top: 30%;
+		right: -50px;
+	}
+	.elipse-4 {
+		background: url('/elipse-blue-3.svg') no-repeat;
+		background-size: contain;
+		width: 150px;
+		height: 150px;
+		bottom: 0%;
+		right: -50px;
+	}
+}
+
+// Responsive Desktop
+@mixin section-stock-desktop {
+	.section-stock {
+		.elipse-1, .elipse-2, .elipse-3, .elipse-4 {
+			display: block;
+		}
+	}
+}

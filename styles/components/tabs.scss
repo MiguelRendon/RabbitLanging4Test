@@ -1,0 +1,81 @@
+// Tabs
+.tabs {
+	position: relative;
+	ul {
+		justify-content: space-between;
+		border: none;
+		li {
+			position: relative;
+			&::before {
+				transition: all 0.3s;
+				content: "";
+				width: 0%;
+				height: 3px;
+				border-radius: 5px;
+				background: $principal-color-2;
+				bottom: 0px;
+				left: 50%;
+				position: absolute;
+				transform: translateX(-50%);
+			}
+			&.is-active {
+				&:before {
+					width: 100%;
+				}
+				a {
+					color: $principal-color-2;
+				}
+			}
+			a {
+				color: $principal-color-1;
+				transition: all 0.3s;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@mixin tabs-smartphone {
+	.tabs {
+		ul {
+			li {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.content-tabs {
+	.content {
+		display: none;
+		&.is-active {
+			display: block;
+		}
+		.columns {
+			margin: 0px;
+		}
+	}
+}
+
+.form-tabs {
+	position: relative;
+	.icon {
+		position: absolute;
+		bottom: -25px;
+		right: 10px;
+		font-size: 30px;
+		color: $principal-color-1;
+		animation: shake 1s ease infinite;
+	}
+}
+
+@keyframes shake {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(5px);
+	}
+}

@@ -1,0 +1,54 @@
+// Page Hero
+
+.page-hero {
+	.hero-body {
+		padding: 50px 0px 0px;
+		background: url('/elipse-gradient-background.svg');
+		background-repeat: no-repeat;
+		background-position: 50% calc(100% + 400px);
+		background-size: cover;
+		.image {
+			max-width: 500px;
+			margin: auto;
+		}
+	}
+	.container {
+		padding: 0px 5px;
+	}
+	.columns {
+		margin: 0px;
+		.column {
+			padding: 0px 0.75rem;
+		}
+	}
+	.cont-info {
+		p {
+			max-width: 800px;
+		}
+	}
+}
+
+// Responsive Tablet
+@mixin page-hero-tablet {
+	.page-hero {
+		.hero-body {
+			background-position: 50% calc(100% + 400px);
+			background-size: cover;
+		}
+	}
+}
+
+// Responsive Desktop
+@mixin page-hero-desktop {
+	.page-hero {
+		.hero-body {
+			background-position: calc(50% + 500px) -20%;
+			background-size: 900px;
+			padding: 0px;
+			.image {
+				max-width: inherit;
+				margin: 0px;
+			}
+		}
+	}
+}

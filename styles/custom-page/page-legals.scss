@@ -1,0 +1,19 @@
+// Legals
+.page-legals {
+	padding: 3rem 0px;
+	.container {
+		padding: 10px 20px;
+	}
+	h4, p {
+		color: $base-color-3;
+	}
+	h4 {
+		font-weight: 600;
+	}
+	a {
+		color: $principal-color-2;
+	}
+	ol {
+		padding: revert;
+	}
+}

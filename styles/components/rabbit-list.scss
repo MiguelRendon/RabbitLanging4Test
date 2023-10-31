@@ -1,0 +1,34 @@
+// Rabbit List
+
+.rabbit-list {
+	list-style-type: none !important;
+	margin: 0px;
+	li {
+		position: relative;
+		display: table;
+		margin: auto;
+		&::before {
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			background: $secondary-color-2;
+			top: 50%;
+			left: -10px;
+			content: '';
+			border-radius: 50px;
+			transform: translateY(-50%);
+		}
+		p {
+			margin: 1rem 10px;
+		}
+	}
+}
+
+@mixin rabbit-list-desktop {
+	.rabbit-list {
+		li {
+			display: list-item;
+			margin: 0px;
+		}
+	}
+}

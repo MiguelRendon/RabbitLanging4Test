@@ -1,0 +1,18 @@
+// Page Contact
+.page-contact {
+	background: url('/background-contacto.png'), no-repeat;
+	background-size: cover;
+	// min-height: calc(100vh - 72px);
+	.hero {
+		.hero-body {
+			padding: 0rem 10px;
+		}
+	}
+}
+
+@mixin page-contact-desktop {
+	.page-contact {
+		position: relative;
+		// min-height: calc(100vh - 76px);
+	}
+}

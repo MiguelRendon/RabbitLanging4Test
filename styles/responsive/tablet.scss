@@ -1,0 +1,36 @@
+@media only screen and (min-width: 600px) {
+	// Patch
+	.traslateY {
+		transform: translateY(-5rem);
+	}
+	.wrap {
+		&.has-header-label {
+			padding-top: 196.45px;
+		}
+	}
+	.CookieConsent {
+		.decline-button {
+			position: relative;
+			right: 0px;
+			bottom: 0px;
+		}
+	}
+
+	// Components
+	@include page-hero-tablet;
+	@include blog-slider-tablet;
+	@include product-card-tablet;
+	@include section-grad-tablet;
+
+	// Custom Page
+	@include home-section-hero-tablet;
+
+	// Layout
+	@include footer-tablet;
+}
+
+@media only screen and (min-width: 769px) {
+	.container {
+		max-width: 960px;
+	}
+}

@@ -1,0 +1,68 @@
+// Acordeon
+
+.acordeon {
+	overflow: hidden;
+	padding-bottom: 1.25rem;
+	position: relative;
+	width: 100%;
+	&.active {
+		.icon {
+			transform: rotate(-180deg);
+		}
+	}
+	dl {
+		overflow: hidden;
+	}
+	dt {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background: $base-color-2;
+		border: 3px solid $principal-color-2;
+		cursor: pointer;
+		overflow: hidden;
+		padding: 0px 15px;
+		border-radius: 100px;
+	}
+	dd {
+		overflow: hidden;
+		transition: all 0.3s;
+		p {
+			margin: 1rem 10px;
+		}
+		.video-container {
+			margin: 1rem auto;
+			max-width: 1200px;
+			video {
+				transform: scale(1);
+			}
+		}
+	}
+	h3 {
+		font-size: 18px;
+		color: $principal-color-2;
+		position: relative;
+		font-weight: 600;
+		margin: 0.5rem 0px;
+	}
+	.icon {
+		font-size: 1rem;
+		color: $principal-color-2;
+		transition: all 0.3s;
+	}
+}
+
+@mixin acordeon-desktop {
+	.acordeon {
+		dt {
+			padding: 0px 20px;
+		}
+		.icon {
+			font-size: 2rem;
+		}
+		h3 {
+			font-size: 24px;
+			text-align: left;
+		}
+	}
+}

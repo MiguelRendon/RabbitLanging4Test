@@ -1,0 +1,48 @@
+// Table
+
+.table {
+	border-radius: 10px;
+	margin: 1.25rem auto;
+	border: 3px solid $secondary-color-2;
+	.table-title, .table-content-row {
+		padding: 1rem ;
+		margin: 0.3125rem ;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 10px;
+		p, h2 {
+			text-align: center;
+			margin: auto;
+		}
+		p {
+			font-size: 24px;
+			max-width: 300px;
+			font-weight: 400;
+
+		}
+		img {
+			max-width: 75px;
+		}
+	}
+	.table-title {
+		background: $secondary-color-2;
+		p {
+			color: $principal-color-1 !important;
+		}
+	}
+	.table-content-row {
+		background: #E4F3FF;
+		min-height: 90px;
+		p {
+			color: $principal-color-1 !important;
+		}
+	}
+	.columns {
+		margin: 0px;
+		padding: 0px;
+		.column {
+			padding: 0px;
+		}
+	}
+}

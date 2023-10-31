@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  tests:
+    name: Lint & Deploy
+    runs-on: ubuntu-latest
+    container: node:14-alpine
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      - name: Build
+        run: yarn build
+      - name: Lint
+        run: yarn lint
+
+  docker-build-staging-new:
+    needs: tests
+    name: Build Docker Container Staging New
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to Registry
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.AWS_ACCESS_KEY_ID_STAGING }}
+          password: ${{ secrets.AWS_SECRET_ACCESS_KEY_STAGING }}
+          registry: ${{ secrets.AWS_ECR_REGISTRY_STAGING }}
+      - name: Build and push landing Docker image
+        uses: docker/build-push-action@v2.7.0
+        with:
+          context: .
+          file: ./docker/Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.AWS_ECR_REGISTRY_STAGING }}/landing/landing:latest
+            ${{ secrets.AWS_ECR_REGISTRY_STAGING }}/landing/landing:staging-${{ github.sha }}
+
+  deploy-staging-new:
+    needs: docker-build-staging-new
+    name: Deploy to AWS EKS Staging New
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Checkout helm charts
+        uses: actions/checkout@v3
+        with:
+          repository: Rabbit-mx/helm-charts
+          token: ${{ secrets.GH_PAT }}
+          path: helm
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_STAGING }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_STAGING }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION_STAGING }}
+      - name: Connect to EKS Cluster
+        run: aws eks --region ${{ secrets.AWS_DEFAULT_REGION_STAGING }} update-kubeconfig --name ${{ secrets.AWS_EKS_CLUSTER_STAGING }}
+      - uses: azure/setup-kubectl@v1
+        with:
+          version: 'v1.23.3'
+      - uses: azure/setup-helm@v1
+        with:
+          version: 'v3.8.0'
+      - name: deploy to cluster
+        run: helm upgrade --install --namespace=staging -f ./infra/helm/staging-new-values.yaml --set image.tag=staging-${{ github.sha }} landing ./helm/landing
+      - name: Configure AWS credentials for eks v1.25
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_STAGING_V1_25 }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_STAGING_V1_25 }}
+          aws-region: ${{ secrets.AWS_DEFAULT_REGION_STAGING }}
+      - name: Connect to EKS Cluster
+        run: aws eks --region ${{ secrets.AWS_DEFAULT_REGION_STAGING }} update-kubeconfig --name ${{ secrets.AWS_EKS_CLUSTER_STAGING_V1_25 }}
+      - uses: azure/setup-kubectl@v1
+        with:
+          version: 'v1.23.3'
+      - uses: azure/setup-helm@v1
+        with:
+          version: 'v3.8.0'
+      - name: deploy to cluster
+        run: helm upgrade --install --namespace=staging -f ./infra/helm/staging-new-values-v1-25.yaml --set image.tag=staging-${{ github.sha }} landing ./helm/landing

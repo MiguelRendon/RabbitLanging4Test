@@ -1,0 +1,42 @@
+// Product Card
+.product-card {
+	padding: 1rem 0.5rem;
+	min-height: 200px;
+	border: 3px solid $secondary-color-2;
+	.cont-info {
+		position: relative;
+		margin: 1rem 0px 0px;
+		width: 100%;;
+		min-height: 90px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 3px;
+			background: $secondary-color-2;
+		}
+		h3 {
+			margin: 0px;
+		}
+	}
+}
+
+@mixin product-card-tablet {
+	.product-card {
+		min-height: 210px;
+	}
+}
+
+@mixin product-card-desktop {
+	.product-card {
+		padding: 1.25rem;
+		min-height: 300px;
+		// max-width: 300px;
+		// margin: auto;
+	}
+}

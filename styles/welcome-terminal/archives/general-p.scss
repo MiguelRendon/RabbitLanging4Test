@@ -1,0 +1,36 @@
+.welcome-terminal {
+	.containerManual,
+	.containerStikers {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.containerStikers ul {
+		padding-top: 20px;
+		margin: 0;
+	}
+	.mainImage {
+		background-size: auto 100%;
+		background-position: left;
+		height: 50vh;
+	}
+	.mainTxtWrap {
+		background-image: url('/medio-circulo-verde.png');
+		background-position: left 70%;
+		background-repeat: no-repeat;
+		justify-content: flex-end;
+		background-size: 50px;
+	}
+	.manualBlock,
+	.stickersBlock
+	{
+		flex-basis: 50%;
+	}
+	.row.secondSection {
+		background-size: 280px auto, 100px auto, 110px auto;
+		padding: 70px 5% 50px;
+	}
+	.text {
+		padding-left: 0;
+		width: 450px;
+	}
+}

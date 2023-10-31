@@ -1,0 +1,36 @@
+image:
+  repository: 226711424557.dkr.ecr.us-east-2.amazonaws.com/landing/landing
+
+ingress:
+  annotations:
+    # alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-2:226711424557:regional/webacl/tf-rabbit-default-waf-acl/934eb9d1-d85d-422c-af61-c9ce767c6297
+    external-dns.alpha.kubernetes.io/hostname: development-landing.staging.rabbitmx.com
+    alb.ingress.kubernetes.io/load-balancer-name: "landing-lb"
+    alb.ingress.kubernetes.io/group.name: landing-lb
+    external-dns.alpha.kubernetes.io/set-identifier: "tf-rabbit-default-eks-cluster"
+    external-dns.alpha.kubernetes.io/aws-weight: "0"
+    external-dns.alpha.kubernetes.io/ttl: "30"
+  hosts:
+    - host: development-landing.staging.rabbitmx.com
+      paths:
+        - path: /
+          pathType: Prefix
+
+# affinity:
+#   nodeAffinity:
+#     requiredDuringSchedulingIgnoredDuringExecution:
+#       nodeSelectorTerms:
+#         - matchExpressions:
+#             - key: eks.amazonaws.com/nodegroup
+#               operator: In
+#               values:
+#                 - tf-rabbit-default-eks-node-group-spot-0
+# tolerations: #only this pod has toleration and is viable to go to ng with taint
+#   - key: "landing-workload" #landing_workload in our case
+#     operator: Equal
+#     value: "true" #true 
+#     effect: "NoSchedule" 
+#   - key: "transactions-workload" #transactions_workload in our case
+#     operator: Equal
+#     value: "true" #true
+#     effect: "NoSchedule"

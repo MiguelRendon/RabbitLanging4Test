@@ -1,0 +1,14 @@
+// Home Dot Background
+.home-dot-bg {
+	// background: url('/back-dots.jpg') repeat;
+	background: url('/back-dots.webp') repeat;
+}
+
+// Responsive Desktop
+@mixin home-dot-bg-desktop {
+	.home-dot-bg {
+		transform: translateY(-10rem);
+		margin-bottom: -10rem;
+		padding-top: 15rem;
+	}
+}

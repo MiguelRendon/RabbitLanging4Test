@@ -1,0 +1,47 @@
+// Marketplace
+.marketplace {
+	.hero {
+		.hero-body {
+			background: url('/elipse-gradient-background.svg');
+			background-repeat: no-repeat;
+			background-position: 50% calc(100% + 520px);
+			background-size: cover;
+		}
+	}
+	.marketplaceAnimationCont {
+		position: relative;
+		max-width: 600px;
+		margin: auto;
+		.mp-item {
+			position: absolute;
+			top: 0;
+		}
+	}
+}
+
+// Responsive Tablet
+@mixin page-hero-tablet {
+	.marketplace {
+		.hero-body {
+			background-position: 50% calc(100% + 400px);
+			background-size: cover;
+		}
+	}
+}
+
+// Desktop Responsive
+@mixin page-marketplace-desktop {
+	.marketplace {
+		.hero {
+			.hero-body {
+				background-position: calc(50% + 500px) -20%;
+				background-size: 900px;
+			}
+		}
+		.cont-info {
+			.buttons {
+				flex-direction: row;
+			}
+		}
+	}
+}

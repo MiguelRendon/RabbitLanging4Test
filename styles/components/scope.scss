@@ -1,0 +1,40 @@
+// Scope
+
+.scope {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	.image {
+		max-width: 120px;
+	}
+	.cont-info {
+		margin: 0px 1.25rem !important;
+		max-width: 200px !important;
+		h4, p, h3 {
+			margin: 4px 0px;
+			text-align: center !important;
+		}
+		h4 {
+			strong {
+				color: $principal-color-2;
+			}
+		}
+		.rabbit-list {
+			p {
+				text-align: left !important;
+				margin: 10px !important;
+			}
+		}
+	}
+}
+
+@mixin scope-desktop {
+	.scope {
+		flex-direction: row;
+		.cont-info {
+			h3, p {
+				text-align: left;
+			}
+		}
+	}
+}

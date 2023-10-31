@@ -1,0 +1,11 @@
+# Exclude Files From All Robots:
+User-agent: *
+
+Disallow: /assets/*
+Disallow: /contacto/gracias*
+Disallow: *.webp*
+
+# SITEMAP
+Sitemap:https://urldefense.com/v3/__https://rabbitmx.com/sitemap.xml__;!!N96JrnIq8IfO5w!hzWx0E3JdbbJtooIM9XYKvpstREEIHqKgTWXo-Cecm0cxmFAW17t1xI5B5tqqtiju8ecjuswpzS4PFPMI_dAiyDNbmCm7RszUg$ 
+
+# End robots.txt file

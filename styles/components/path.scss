@@ -1,0 +1,46 @@
+// Path
+.path {
+	position: relative;
+	max-width: 200px;
+	margin: auto;
+	&:nth-last-child(1) {
+		.arrow {
+			display: none !important;
+		}
+	}
+	.image {
+		overflow: visible;
+	}
+	p {
+		color: $principal-color-1;
+		margin: 0.5rem auto;
+		a {
+			color: $principal-color-2;
+		}
+	}
+	.arrow {
+		position: absolute;
+		display: none;
+	}
+}
+
+// Responsive Desktop
+@mixin path-desktop {
+	.path {
+		max-width: 385px;
+		.arrow {
+			display: block;
+			top: 50%;
+			right: -10px;
+			transform: translate(100%, -50%);
+			max-width: 60px;
+		}
+	}
+	.img-path
+	{
+		max-width: 250px;
+		max-height: 250px;
+		margin: auto;
+	}
+}
+

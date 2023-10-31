@@ -1,0 +1,50 @@
+// Route Home Section
+.home-section-route {
+	position: relative;
+	padding: 3rem 0px;
+	.elipse-1, .elipse-2 {
+		position: absolute;
+		display: none;
+	}
+	.elipse-1 {
+		background: url('/elipse-blue-1.svg') no-repeat;
+		background-size: contain;
+		width: 200px;
+		height: 200px;
+		top: 300px;
+		left: -150px;
+	}
+	.elipse-2 {
+		background: url('/elipse-darkblue-3.svg') no-repeat;
+		background-size: contain;
+		width: 50px;
+		height: 50px;
+		top: 300px;
+		left: 0px;
+	}
+	p strong
+	{
+		padding-left: 30px;
+	}
+}
+
+@mixin home-section-route-desktop {
+	.home-section-route {
+		padding: 5rem 0px;
+		.elipse-1, .elipse-2 {
+			display: block;
+		}
+		.elipse-1 {
+			width: 300px;
+			height: 300px;
+			top: 30px;
+			left: -250px;
+		}
+		.elipse-2 {
+			width: 70px;
+			height: 70px;
+			top: 30px;
+			left: -20px;
+		}
+	}
+}

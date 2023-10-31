@@ -1,0 +1,155 @@
+// Home Section Steps
+
+.home-section-steps {
+	position: relative;
+	h3 {
+		color:  $principal-color-1;
+	}
+	.elipse-1, .elipse-2, .elipse-3 {
+		position: absolute;
+		display: none;
+	}
+	.elipse-1 {
+		background: url('/elipse-green-2.svg') no-repeat;
+		background-size: contain;
+		width: 200px;
+		height: 200px;
+		top: 50px;
+		left: -100px;
+	}
+	.elipse-2 {
+		background: url('/elipse-blue-3.svg') no-repeat;
+		background-size: contain;
+		width: 70px;
+		height: 70px;
+		top: -20px;
+		right: -30px;
+	}
+	.elipse-3 {
+		background: url('/elipse-darkblue-1.svg') no-repeat;
+		background-size: contain;
+		width: 300px;
+		height: 300px;
+		bottom: -70px;
+		right: -200px;
+	}
+}
+.block-background-bottom, .block-background-top
+{
+	flex-direction: column;
+}
+.block-image
+{
+	margin-bottom: 20px;
+}
+.block-image, .block-text
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.block-text p
+{
+	text-align: center;	
+	margin: 0;
+}
+.margin-top
+{
+	margin-top: 10px;
+}
+@mixin home-section-steps-desktop {
+	.home-section-steps {
+		padding: 10px 0px;
+		.columns {
+			margin: 50px 0px;
+			.column {
+				.path {
+					.icon {
+						display: block;
+					}
+				}
+				&:nth-last-of-type(1) {
+					.path {
+						.icon {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		.elipse-1, .elipse-2, .elipse-3 {
+			display: block;
+		}
+		.block-section-step
+		{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			
+			.block-background-bottom, .block-background-top
+			{
+				display: flex;
+				width: 100%;
+				height: 496px;
+				padding: 8px;
+				justify-content: center;
+				align-items: center;
+				flex-direction: row;
+			}
+			.block-background-top
+			{
+				background: url('/Asset 2 1.png') no-repeat;
+				background-size: 100% auto;
+				background-position: bottom center;
+			}
+			.block-background-bottom
+			{
+				background: url('/Asset 2 2.png') no-repeat;
+				background-size: 100% auto;
+				background-position: center center;
+			}
+			
+		}
+		.block-item
+		{
+			display: flex;
+			flex-direction: column;
+			width: 33%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+		}
+		.reverse-columns
+		{
+			flex-direction: column-reverse;
+		}
+		.reverse-row
+		{
+			flex-direction: row-reverse;
+		}
+		.toTop
+		{
+			justify-content: flex-start;
+		}
+		.toBottom
+		{
+			justify-content: flex-end;
+		}
+	}
+	.img-seller-1
+	{
+		max-width: 700px;
+		height: 684px;
+		object-fit: contain;
+	}
+	.position
+	{
+		position: relative;
+	}
+	.position-item
+	{
+		position: absolute;
+		bottom: -50px;
+	}
+	
+}

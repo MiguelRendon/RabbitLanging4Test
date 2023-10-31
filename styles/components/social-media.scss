@@ -1,0 +1,13 @@
+// Social Media
+.social-media {
+	display: flex;
+	a {
+		color: $principal-color-2;
+		transition: all 0.3s;
+		margin: 0px 0.3125rem;
+		&:hover {
+			color: $principal-color-1 !important;
+			transform: scale(1.1);
+		}
+	}
+}

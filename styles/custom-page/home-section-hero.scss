@@ -1,0 +1,861 @@
+// Home
+.home-section-hero {
+	position: relative;
+	overflow: hidden;
+
+	.swiper-container {
+		padding: 0px !important;
+		// max-height: ;
+		background-color: #007aff;
+		.swiper-pagination {
+			bottom: 50px;
+		}
+	}
+
+	.hero {
+		height: 800px;
+		.hero-body {
+			padding: 50px 0px 0px;
+			.hero-dinamica
+			{
+				position: relative;
+				max-width: 1440px;
+				margin: auto;
+				height: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: flex-start;
+				flex-direction: column;		
+			}
+			.hero-horizontal
+			{
+				position: relative;
+				max-width: 1440px;
+				margin: auto;
+				height: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				align-items: flex-start;
+				flex-direction: column;
+
+				.hero-horizontal-top
+				{
+					display: flex;
+					width: 100%;
+					height: 30%;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					.hero-container-right
+					{
+						width: 100%;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						
+					}
+					.hero-container-left
+					{
+						width: 100%;
+						height: 100%;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					
+				}
+				.hero-horizontal-bottom
+				{
+					position: relative;
+					width: 100%;
+					height: 50%;
+					display: flex;
+						justify-content: center;
+						align-items: center;
+				}
+				
+			}
+			.cont-horizontal
+			{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
+			.content-img-text
+			{
+				width: 100%;
+				height: 50%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.content-img-bann
+			{
+				width: 100%;
+				height: 50%;
+				display: flex;
+				align-items: flex-end;
+			}
+			.text-content-img, .text-content-img-subtitle, .text-content-img-green
+			{
+				margin-top: 10px;
+				margin-bottom: 10px;
+			}
+			.text-content-img strong
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 40px;
+				color: #FFF;
+				text-align: center;
+			}
+			.text-content-img-green strong
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 40px;
+				color: #D0DF00;
+				text-align: center;
+			}
+			.text-content-img-subtitle
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 20px;
+				color: #fff;
+				text-align: center;
+
+			}
+			
+
+
+		}
+
+	}
+	.hero-precios-abajo
+	{
+		flex-direction: column;
+	}
+	.contenedor-info-precios-abajo
+	{
+		width: 100%;
+		height: 50%;
+	}
+	.hero-image
+	{
+		width: 100%;
+		object-fit: contain;
+	}
+	.hero-image-bottom
+	{
+		position: absolute;
+		top: -40px;
+		height: 100%;
+		object-fit: contain;
+	}
+	.image-dinamica
+	{
+		max-width: 80%;
+	}
+	.image-horizontal-top
+	{
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 90%;
+		object-fit: contain;
+	}
+	.image-horizontal-bottom
+	{
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 90%;
+		object-fit: contain;
+	}
+	.image-precios-abajo-bottom
+	{
+		position: absolute;
+		top: -5%;
+		left: 50%;
+		transform: translate(-50%, 5%);
+		width: 90%;
+		object-fit: contain;
+	}
+	.image-precios-abajo-top
+	{
+		position: absolute;
+		bottom: 0px;
+		left: 50%;
+		transform: translate(-50%,0);
+		width: 100%;
+		object-fit: contain;
+		
+	}
+	.boton_enlace_precios_abajo
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);	
+	}
+	.top-precios-abajo
+	{
+		flex-direction: column;
+	}
+	.img-toTop
+		{
+			position: relative;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+	
+
+	.hero-background {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		&.no-mask {
+			&:before {
+				background: linear-gradient(90deg, rgba(28,79,128,0.6) 50%, rgba(255,255,255,0) 100%);
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, rgba(28,79,128,0.6) 50%, rgba(255,255,255,0) 100%);
+			z-index: 0;
+		}
+	}
+	.hero-background-2 {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		&.no-mask {
+			&:before {
+				background: none;
+			}
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			// background: linear-gradient(90deg, rgba(28,79,128,0.6) 50%, rgba(255,255,255,0) 100%);
+			z-index: 0;
+		}
+	}
+	.columns {
+		margin: 0px;
+		.column {
+			padding: 0px;
+			.image {
+				max-width: 500px;
+				margin: auto;
+			}
+		}
+	}
+	.cont-info {
+		max-width: 600px;
+		min-height: 350px;
+		margin: auto;
+		padding: 0px 5px;
+		h1 , p {
+			color: $base-color-2;
+			text-align: center;
+		}
+		h1 {
+			font-weight: 700;
+		}
+		.buttons {
+			justify-content: center;
+			flex-direction: row;
+		}
+		&.promo-mete-gol {
+			.image {
+				// max-width: 351px;
+				max-width: 322px;
+			}
+		}
+		&.llegamos-queretaro
+		{
+			.image-queretaro img{
+				max-height: 177px;
+			}
+			.image-queretaro-texto img{
+				max-height: 70px;
+			}
+		}
+		.text-green
+		{
+			color: #D0DF00;
+		}
+	}
+	.columns-seller
+	{
+		padding: 0;
+		height: 765px;
+		.image-seller-left
+		{
+			width: 330px;
+			margin: auto;
+		}
+		&.image-seller-right
+		{
+			height: 50%;
+
+		}
+	}
+	.columns-seller-center
+	{
+		height: 765px;
+		display: flex;
+		flex-direction: column;
+		align-items:flex-end;
+		justify-content: flex-end;
+		padding: 0;
+	}
+	.image-banner
+	{
+		width: 230px;
+		height: 282px;
+		margin: auto;
+	}
+	.no-padding
+	{
+		padding-top: 2px;
+		margin: 0;
+	}
+	.text-left
+	{
+		text-align: left;
+	}
+	.image-map
+	{
+		width: 320px;
+		height: 229px;
+		margin: auto;
+	}
+	.image-timeline
+	{
+		width: 300px;
+		height: 30px;
+		margin: auto;
+	}
+	.text-path
+	{
+		width: 80%;
+	}
+	.blue
+	{
+		background-color: #00AEEF;
+	}
+
+}
+
+
+.hero-banner
+		{
+			width: 100%;
+			height: 800px;
+			background-color: #00AEEF;
+			display: flex;
+			flex-direction: column;
+			.hero-text
+			{
+				width: 100%;
+				height: 50%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			
+				.text-green
+				{
+					width: 100%;
+					color: #D0DF00;
+					font-size: 40px;
+					text-align: center;
+					margin: 0;
+					font-weight: bold;
+				}
+				.text-white
+				{
+					width: 100%;
+					color: #FFF;
+					font-size: 40px;
+					text-align: center;
+					margin: 0;
+
+				}
+				.text-white-bold
+				{
+					width: 100%;
+					color: #FFF;
+					font-size: 40px;
+					text-align: center;
+					font-weight: bold;
+					margin: 0;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+				.text-white-small
+				{
+					width: 100%;
+					color: #FFF;
+					font-size: 15px;
+					text-align: center;
+					margin: 0;
+
+				}
+			}
+			.hero-img
+			{
+				width: 100%;
+				height: 50%;
+				display: flex;
+				justify-content: flex-end;
+				.img-banner-hero
+				{
+					width: 100%;
+					object-fit: contain;
+					position: absolute;
+					right: 0;
+					bottom:0;
+				}
+
+			}
+
+		}
+
+
+
+@mixin home-section-hero-tablet {
+	.home-section-hero {
+		position: relative;
+		.swiper-container {
+			.swiper-pagination {
+				bottom: 150px;
+			}
+		}
+	}
+
+
+
+	.hero-banner
+		{
+
+			.hero-text
+			{
+				.text-green
+				{
+
+					// font-size: 3.5vw;
+					font-size: 55px;
+				}
+				.text-white
+				{
+
+					font-size: 55px;
+
+				}
+				.text-white-bold
+				{
+					font-size: 65px;
+				}
+				.text-white-small
+				{
+					font-size: 15px;
+				}
+			}
+			.hero-img
+			{
+				.img-banner-hero
+				{
+					max-width: 80%;
+				}
+			}
+		}
+}
+
+@mixin home-section-hero-desktop {
+	.home-section-hero { 
+		position: relative;
+		.swiper-container {
+			.swiper-pagination {
+				bottom: 10px;
+			}
+		}
+		.img-toTop
+		{
+			position: static;
+			left: 0;
+			transform: translate(0,0);
+		}
+		.hero {
+			max-height: 670px;
+			.hero-body {
+				padding: 50px 0px 0px;
+				.hero-dinamica
+				{
+					flex-direction: row;
+				}
+				.container-tienda
+				{
+					width: 100%;
+				}
+				.hero-horizontal
+				{
+					.hero-horizontal-top
+					{
+						display: flex;
+						width: 100%;
+						height: 20%;
+						flex-direction: row;
+						.hero-container-right, .hero-container-left
+						{
+							width: 50%;
+							height: 100%;
+						}
+					}
+					.hero-horizontal-bottom
+					{
+						position: relative;
+						width: 100%;
+						height: 80%;
+						display: flex;
+							justify-content: center;
+							align-items: center;
+					}	
+				}
+				.hero-precios-abajo
+				{
+					position: relative;
+					max-width: 1440px;
+					margin: auto;
+					height: 100%;
+					display: flex;
+					justify-content: space-evenly;
+					align-items: flex-start;
+					flex-direction: row;
+				}
+				.contenedor-info-precios-abajo
+				{
+					
+					width: 50%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.top-precios-abajo
+				{
+					position: absolute;
+					bottom: -10%;
+					right: -5%;
+					transform: translate(10%,5%);
+				}
+				.row-center
+				{
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+			.cont-horizontal
+			{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+			}
+			.content-img-text
+			{
+				width: 40%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.content-img-bann
+			{
+				width: 60%;
+				height: 100%;
+				display: flex;
+				align-items: flex-end;
+			}
+			.text-content-img, .text-content-img-subtitle, .text-content-img-green
+			{
+				margin: 0;
+			}
+			.text-content-img strong
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 50px;
+				color: #FFF;
+				text-align: center;
+			}
+			.text-content-img-green strong
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 50px;
+				color: #D0DF00;
+				text-align: center;
+			}
+			.text-content-img-subtitle
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 30px;
+				color: #fff;
+				text-align: center;
+
+			}
+			}
+			.hero-background-2 
+			{
+				min-height: 670px;
+			}
+			.hero-background
+			{
+				min-height: 670px;
+			}
+		}
+		.hero-image
+		{
+			width: 100%;
+			object-fit: contain;
+		}
+		.columns {
+			.column {
+				.image {
+					max-width: 700px;
+				}
+			}
+		}
+		.cont-info {
+			margin: 0px;
+			h1 , p {
+				text-align: left;
+			}
+			.buttons {
+				justify-content: flex-start;
+			}
+			&.promo-mete-gol {
+				.image {
+					max-width: 80%;
+				}
+			}
+			&.llegamos-queretaro
+			{
+				.image-queretaro img{
+					max-height: 287px;
+				}
+				.image-queretaro-texto img{
+					max-height: 100px;
+				}
+			}
+		}
+		.columns-seller
+		{
+			// position: relative;
+			display: flex;
+			min-width: 100%;
+			height: 669px;
+			// height: 100%;
+			justify-content: space-between;
+			padding: 0;
+			&.image-seller-left
+			{
+				left: 100px;
+				width: 700px;
+				height: 684px;
+				object-fit: contain;
+				padding-right: 30vw;
+
+			}
+			&.image-seller-right
+			{
+				// justify-content: flex-end;
+				align-items: flex-end;
+				min-width: 700px;
+				min-height: 684px;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+		.columns-seller-center
+		{
+			position: relative;
+			display: flex;
+			min-width: 100%;
+			height: 669px;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 0;	
+			.image-seller-right
+			{
+				display: flex;
+				align-self: flex-end;
+			}
+		}
+		.mask-gradient
+		{
+			background: linear-gradient(90deg, rgba(28,79,128,0.6) 50%, rgba(255,255,255,0) 100%);	
+		}
+		.list-hero
+		{
+			display: flex;
+			flex-direction: column;
+			justify-content: left;
+			& li
+			{
+				text-align: left;
+			}
+		}
+		.image-banner
+		{
+			width: 393px;
+			height: 482px;
+			margin: 0;
+		}
+		.image-horizontal-top, .image-horizontal-bottom
+		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 90%;
+			object-fit: contain;
+		}
+		.image-precios-abajo-bottom
+		{
+			position: absolute;
+			bottom: 30%;
+			left: 50%;
+			transform: translate(-50%,-30%);
+			width: 30vw;
+			object-fit: contain;
+		}	
+		.image-precios-abajo-top
+		{
+			position: absolute;
+			bottom: 0px;
+			left: 30%;
+			transform: translate(-50%,0);
+			height: 90%;
+			object-fit: contain;
+		}
+		.boton_enlace_precios_abajo
+		{
+			position: absolute;
+			bottom: -50%;
+			left: 50%;
+			transform: translate(-50%,50%);	
+		}
+    }
+
+	.img-seller-1
+	{
+		max-width: 700px;
+		height: 684px;
+		object-fit: contain;
+	}
+
+
+	.hero-banner
+		{
+			width: 100%;
+			max-height: 670px;
+			background-color: #00AEEF;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			.hero-text
+			{
+				width: 50%;
+				max-width: 670px;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			
+				.text-green
+				{
+					width: 100%;
+					color: #D0DF00;
+					font-size: 65px;
+					text-align: center;
+					margin: 0;
+					font-weight: bold;
+				}
+				.text-white
+				{
+					width: 100%;
+					color: #FFF;
+					font-size: 3.5vw;
+					font-size: 65px;
+					text-align: center;
+					margin: 0;
+				}
+				.text-white-bold
+				{
+					width: 100%;
+					color: #FFF;
+					font-size: 75px;
+					text-align: center;
+					font-weight: bold;
+					margin: 0;
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+				.text-white-small
+				{
+					width: 100%;
+					color: #FFF;
+					font-size: 17px;
+					text-align: center;
+					margin: 0;
+
+				}
+			}
+			.hero-img
+			{
+				width: 50%;
+				max-width: 670px;
+				height: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+				position: relative;
+				.img-banner-hero
+				{
+					max-width: 750px;
+					max-height: 606px;
+					object-fit: contain;
+					position: absolute;
+					right: 0;
+				}
+			}
+		}
+
+}
+

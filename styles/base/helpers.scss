@@ -1,0 +1,188 @@
+// Helpers
+
+.marX {
+	margin: 0px 3rem;
+}
+.marY {
+	margin: 3rem 0px;
+}
+.rmvPad {
+	padding: 0px!important
+}
+.rmvMar {
+	margin: 0px!important
+}
+.gnl-p-top{
+	padding-top: 3rem;
+}
+.gnl-p-bottom{
+	padding-bottom: 3rem;
+}
+.gnl-m-top{
+	margin-top: 10px;
+}
+.gnl-m-bottom{
+	margin-top: 10px;
+}
+.gnl-title{
+	margin-bottom: 10px;
+}
+.alignleft {
+	margin: 0px;
+	margin-right: 1rem;
+	float: left;
+}
+.alignright {
+	margin: 0px;
+	margin-left: 1rem;
+	float: right;
+}
+.alignnone {
+	margin: 0px;
+}
+.maxWidth {
+	max-width: 700px;
+}
+.has-text-principal-color-2 {
+	color: $principal-color-2 !important;
+}
+.has-text-white {
+	h1, h2, h3, h4, h5, h6, p {
+		color: $base-color-2 !important;
+		strong {
+			color: $base-color-2 !important;
+		}
+		span {
+			color: $base-color-2 !important;
+		}
+		a {
+			color: $base-color-2 !important;
+		}
+	}
+	a {
+		color: $base-color-2 !important;
+	}
+}
+.bg-prim-1 {
+	background: $principal-color-1;
+}
+.bg-prim-2 {
+	background: $principal-color-2;
+}
+.bg-prim-3 {
+	background: $principal-color-3;
+}
+.bg-sec-1 {
+	background: $secondary-color-1;
+}
+.bg-sec-2 {
+	background: $secondary-color-2;
+}
+.bg-sec-4 {
+	background: $base-color-4;
+}
+.bg-base-2 {
+	background: $base-color-2;
+}
+.has-gradient-1 {
+	// background: linear-gradient(180deg, rgba(73,173,233,1) 0%, rgba(28,79,128,1) 100%);
+	background: linear-gradient(180deg, #00ADEF 0%, #00A8EE 16.15%, #0076E0 100%);
+}
+.has-gradient-2 {
+	background: linear-gradient(180deg, #004D81 0%, #00305E 100%);
+}
+.has-gradient-3 {
+	background: linear-gradient(180deg, #EEFF01 -55.29%, #B6D300 100%);
+}
+.has-dot-background {
+	background: url('/back-dots.webp') repeat;
+	// background: url('/back-dots.jpg') repeat;
+	background-size: cover;
+}
+.has-border-1 {
+	border: 3px solid $principal-color-1;
+}
+.has-border-2 {
+	border: 3px solid $secondary-color-2;
+}
+.has-elipse-elements {
+	position: relative;
+	.elipse-1, .elipse-2, .elipse-3, .elipse-4 {
+		position: absolute;
+		display: none;
+	}
+	.elipse-1 {
+		background: url('/elipse-blue-3.svg') no-repeat;
+		background-size: contain;
+		width: 50px;
+		height: 50px;
+		top: 50px;
+		left: 10px;
+	}
+	.elipse-2 {
+		background: url('/elipse-blue-2.svg') no-repeat;
+		background-size: contain;
+		width: 150px;
+		height: 150px;
+		top: 10px;
+		right: -30px;
+	}
+	.elipse-3 {
+		background: url('/elipse-green-2.svg') no-repeat;
+		background-size: contain;
+		width: 170px;
+		height: 170px;
+		left: -100px;
+		bottom: 20px;
+	}
+	.elipse-4 {
+		background: url('/elipse-darkblue-1.svg') no-repeat;
+		background-size: contain;
+		width: 150px;
+		height: 150px;
+		bottom: 70px;
+		right: -100px;
+	}
+}
+.has-round-bottom {
+	border: none !important;
+}
+.has-hover-transition {
+	transition: all 0.3s;
+	&:hover {
+		transform: translateY(-3%);
+	}
+}
+.box {
+	border-radius: 20px;
+}
+.cont-info {
+	max-width: 700px;
+	margin: auto;
+	text-align: center;
+	.buttons {
+		align-items: center;
+	}
+}
+.has-text-centered {
+	h1, h2, h3, p {
+		text-align: center !important;
+		strong {
+			text-align: center !important;
+		}
+	}
+}
+.download-catalogue {
+	transition: all 0.3s;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.08);
+	}
+}
+.is-min-width-200 {
+	min-width: 200px;
+}
+
+.is-overflow-visible {
+	overflow: visible;
+}
